@@ -70,6 +70,13 @@ Array.from(links).map((link) => {
   });
 });
 
+// Add form reset
+window.onbeforeunload = () => {
+  for (const form of document.getElementsByTagName("form")) {
+    form.reset();
+  }
+};
+
 // Scroll Reveal
 
 const scroll = ScrollReveal({
