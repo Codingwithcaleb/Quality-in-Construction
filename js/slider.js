@@ -19,10 +19,15 @@ const swiper2 = new Swiper(".slider-2", {
 });
 
 const swiper3 = new Swiper(".slider-3", {
+  loop: true,
+  speed: 1000,
+  autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+  },
   autoHeight: true,
   effect: "coverflow",
   grabCursor: true,
-  loop: true,
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
@@ -33,10 +38,11 @@ const swiper3 = new Swiper(".slider-3", {
     slideShadows: true,
   },
   navigation: {
-    nextEl: ".custom-next",
-    prevEl: ".custom-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
     el: ".custom-pagination",
+    clickable: true
   },
 });
